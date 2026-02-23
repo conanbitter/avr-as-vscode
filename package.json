@@ -1,0 +1,25 @@
+{
+  "name": "avr-as",
+  "displayName": "AVR-AS assembly language syntax",
+  "description": "Syntax highlighting for avr-as assembly language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "avras",
+      "aliases": ["AVR-AS", "avras"],
+      "extensions": [".S",".asm",".inc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "avras",
+      "scopeName": "source.avras",
+      "path": "./syntaxes/avras.tmLanguage.json"
+    }]
+  }
+}
