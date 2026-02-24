@@ -12,6 +12,12 @@
 			"include": "#block_comment"
 		},
 		{
+			"include": "#preprocessor_define"
+		},
+		{
+			"include": "#preprocessor_include"
+		},
+		{
 			"include": "#preprocessor"
 		},
 		{
@@ -63,6 +69,20 @@
 			"begin": "/\\*",
 			"end": "\\*/",
 			"name":"comment.block.avras"
+		},
+		"preprocessor_define":{
+			"match": "(#define) ([A-Za-z]\\w*)",
+			"captures": {
+				"1":{"name":"keyword.directive.avras"},
+				"2":{"name":"constant.language.avras"}
+			}
+		},
+		"preprocessor_include":{
+			"match": "(#include) (\"[^\"]*\"|<[^>]*>)",
+			"captures": {
+				"1":{"name":"keyword.directive.avras"},
+				"2":{"name":"string.quoted.double"}
+			}
 		},
 		"preprocessor":{
 			"patterns": [
